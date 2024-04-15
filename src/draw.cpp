@@ -28,7 +28,7 @@ void draw_circle(int x_c, int y_c, int r) {
       SDL_RenderDrawPoint(renderer, y + x_c, i + y_c);
       SDL_RenderDrawPoint(renderer, -y + x_c, i + y_c);
     }
-    //    printf("(%d,%d)\n", x, y);
+
     ++y;
     t1 += y;
     t2 = t1 - x;

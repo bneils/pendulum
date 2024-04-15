@@ -57,8 +57,6 @@ int main() {
     printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
     return 1;
   }
-
-  draw_circle(0, 0, 6);
   
   Mass pendulum {PENDULUM_MASS, PENDULUM_INITIAL_POS, Vector(0, 0)};  
   Vector center(0, 0);
