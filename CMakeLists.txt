@@ -5,6 +5,7 @@ find_package(SDL2 REQUIRED)
 add_executable(pendulum
 	src/main.cpp
 	src/vector.cpp
+	src/draw.cpp
 )
 
 target_link_libraries(pendulum

@@ -2,30 +2,30 @@
 
 #include "vector.hpp"
 
-Vector::Vector(double x, double y) : x(x), y(y) {}
-double Vector::get_x() { return x; }
-double Vector::get_y() { return y; }
+Vector::Vector(double x, double y) : _x(x), _y(y) {}
+double Vector::x() { return _x; }
+double Vector::y() { return _y; }
 Vector Vector::scale(double c) {
-  Vector resultant(x * c, y * c);
+  Vector resultant(_x * c, _y * c);
   return resultant;
 }
 
 Vector Vector::add(Vector v) {
-  Vector resultant(x + v.get_x(), y + v.get_y());
+  Vector resultant(_x + v.x(), _y + v.y());
   return resultant;
 }
 
 Vector Vector::sub(Vector v) {
-  Vector resultant(x - v.get_x(), y - v.get_y());
+  Vector resultant(_x - v.x(), _y - v.y());
   return resultant;
 }
 
 double Vector::magnitude() {
-  return sqrt(x * x + y * y);
+  return sqrt(_x * _x + _y * _y);
 }
 
 Vector Vector::normalize() {
   double mag = magnitude();
-  Vector resultant(x / mag, y / mag);
+  Vector resultant(_x / mag, _y / mag);
   return resultant;
 }
