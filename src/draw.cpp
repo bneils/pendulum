@@ -5,10 +5,6 @@
 extern SDL_Window* window;
 extern SDL_Renderer* renderer;
 
-void set_pixel(int x, int y, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
-  SDL_RenderDrawPoint(renderer, x, y);
-}
-
 void draw_circle(int x_c, int y_c, int r) {  
   int t1, t2, x, y;
 
